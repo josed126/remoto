@@ -1,7 +1,7 @@
  /* Aqui vamos a poner el fondo de la pagina */
 /* Para no cimentar todos lo que hecho los id ponerle un color , ponerle en algunos donde se van a colocar si en la izquierda o en la derecha */
 body {
-           background-image: url("imagenes/captura.png");
+           background-image: url("imagenes/error.png");
             font-family: 'Covered By Your Grace';
         }
         /* aqui vamos poner el texto en el centro */
