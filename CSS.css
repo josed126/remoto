@@ -1,0 +1,78 @@
+ /* Aqui vamos a poner el fondo de la pagina */
+/* Para no cimentar todos lo que hecho los id ponerle un color , ponerle en algunos donde se van a colocar si en la izquierda o en la derecha */
+body {
+           background-image: url("imagenes/captura.png");
+            font-family: 'Covered By Your Grace';
+        }
+        /* aqui vamos poner el texto en el centro */
+        h1 {
+            font-family: 'Covered By Your Grace', cursive;
+            text-align: center;
+        }
+        /* aqui vamos el bordes al titulo */
+        #Titulo {
+            background-color: greenyellow;
+            text-align: center;
+            padding: 2%;
+            border-top-style: dashed;
+            border-right-style: double;
+            border-bottom-style: dotted;
+            border-left-style: solid;
+        }
+        
+        #Enunciado {
+            font-family: 'American',cursive;
+            text-align: center;
+        }
+        
+        #Numeros {
+            background-color: darkorange;
+            text-align: center;
+            padding: 5%;
+        }
+        
+        #Error {
+            background-color: aliceblue
+            padding: 7%;
+            content: 5%;
+        }
+        
+        #Boton {
+            background-color: gold;
+            text-align: center;
+            padding: 5%;
+            display: inline-flex;
+            padding: 2%;
+           margin-left: 35%;
+        }
+        
+        #Boton:hover {
+            background: #3cb0fd;
+            text-decoration: none;
+        }
+        
+        #Caja_Resultado {
+            background-color: darkkhaki;
+            text-align: center;
+            display: inline-flex;
+            padding: 2%;
+            margin-left: 45%
+        }
+        
+        #Imagen {
+            background-color: navy;
+        }
+        
+        #Audio {
+            background-color: gray;
+        }
+        
+        #izquierda {
+            float: left;
+            margin-left: 5%;
+        }
+        
+        #derecha {
+            float: left;
+            margin-left: 5%;
+        }

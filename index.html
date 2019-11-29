@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Números Aleatorios</title>
+    <link rel="stylesheet" type="text/css" href="CSS.css"> 
+   
+    
+    <script>
+        
+        /* aqui vamos a crear la funcion con sus variables*/
+        function Aleatorio() {
+            "use strict";
+            var numero = document.getElementsByTagName("input"),
+            min = parseInt(numero[0].value, 10),
+            max = parseInt(numero[1].value, 10),
+            num = parseInt(Math.floor(Math.random()* (max - min+1) + min), 10),
+           
+            /* aqui vamos a poner las variables  de las imagenes y los audios */
+            imagen = document.getElementById("Imagen"),
+            audio = document.getElementById("Audio");
+            /* aqui vamos a crear con la funcion switch para cada numero que salga */
+            switch (num) {
+
+                case 0:
+                    imagen.src = "imagenes/cero.png";
+                    imagen.alt = "Número cero";
+                    audio.innerHTML = '<audio src="sonidos/cero.mp3" controls autoplay></audio>';
+                    break;
+                case 1:
+                    imagen.src = "imagenes/uno.png";
+                    imagen.alt = "Número uno";
+                    audio.innerHTML = '<audio src="sonidos/uno.mp3" controls autoplay></audio>';
+                    break;
+                case 2:
+                    imagen.src = "imagenes/dos.png";
+                    imagen.alt = "Número dos";
+                    audio.innerHTML = '<audio src="sonidos/dos.mp3" controls autoplay></audio>';
+                    break;
+                case 3:
+                    imagen.src = "imagenes/tres.png";
+                    imagen.alt = "Número tres";
+                    audio.innerHTML = '<audio src="sonidos/tres.mp3" controls autoplay></audio>';
+                    break;
+                case 4:
+                    imagen.src = "imagenes/cuatro.png";
+                    imagen.alt = "Número cuatro";
+                    audio.innerHTML = '<audio src="sonidos/cuatro.mp3" controls autoplay></audio>';
+                    break;
+                case 5:
+                    imagen.src = "imagenes/cinco.png";
+                    imagen.alt = "Número cinco";
+                    audio.innerHTML = '<audio src="sonidos/cinco.mp3" controls autoplay></audio>';
+                    break;
+                case 6:
+                    imagen.src = "imagenes/seis.png";
+                    imagen.alt = "Número seis";
+                    audio.innerHTML = '<audio src="sonidos/seis.mp3" controls autoplay></audio>';
+                    break;
+                case 7:
+                    imagen.src = "imagenes/siete.png";
+                    imagen.alt = "Número siete";
+                    audio.innerHTML = '<audio src="sonidos/siete.mp3" controls autoplay></audio>';
+                    break;
+                case 8:
+                    imagen.src = "imagenes/ocho.png";
+                    imagen.alt = "Número ocho";
+                    audio.innerHTML = '<audio src="sonidos/ocho.mp3" controls autoplay></audio>';
+                    break;
+                case 9:
+                    imagen.src = "imagenes/nueve.png";
+                    imagen.alt = "Número nueve";
+                    audio.innerHTML = '<audio src="sonidos/nueve.mp3" controls autoplay></audio>';
+                    break;
+                case 10:
+                    imagen.src = "imagenes/diez.png";
+                    imagen.alt = "Número diez";
+                    audio.innerHTML = '<audio src="sonidos/diez.mp3" controls autoplay></audio>';
+                    break;
+                default:
+                    imagen.src = "imagenes/error.png";
+                    imagen.alt = "Números";
+                    audio.innerHTML = '<audio src="sonidos/numero.mp3" controls autoplay></audio>';
+                }
+/* aqui vamos a poner los errores para que se bloquees */
+            if (min > max) {
+               
+                document.getElementById("error1").style.display = 'block';
+                
+            } else if (isNaN(min) || isNaN(max)) {
+                document.getElementById("error1").style.display = 'block';
+                
+            } else {
+               
+                document.getElementById("error1").style.display = 'none';
+                
+             document.getElementById("Resultado").innerHTML = num;
+
+                
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="Titulo">
+        <h1>Números Aleatorios</h1></div>
+
+    <div id="izquierda">
+        <div id="Enunciado">
+            <p>Selecione el valor minimo y máximo para el rango de valores para generar</p>
+                
+        </div>
+
+        <div id="Numeros">
+            <p>Valor mínino: </p>
+<!--aqui vamos poner el tipo texto del maximo y minimo-->
+            <input type="number" id="minimo" size="2">
+
+            <p>Valor máximo: </p>
+
+            <input type="number" id="maximo" size="2" />
+        </div>
+<!--aqui vsmos a decir donde sale el mensaje de error-->
+        <div id="Error">
+            <p id="error1" style="display:none;">ERROR.</p>
+            
+        </div>
+<!--la creacion del boton de la funcion aleatorio-->
+        <div id="Boton">
+            <button onClick="Aleatorio()">Ejecutar</button>
+        </div>
+    </div>
+
+<!--aqui es vamsoa poner la id derecha para luego en el CSS ponerlo a la derecha-->
+    <div id="derecha">
+
+        <div id="Caja_Resultado">
+            <p id="Resultado">RESULTADO</p>
+        </div>
+        <div id="Imagen2"><img id="Imagen" src="imagenes/numeros.png" alt="Números" />
+        </div>
+        <div id="Audio"></div>
+    </div>
+
+
+
+
+</body>
+
+</html>
